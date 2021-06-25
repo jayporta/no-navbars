@@ -1,0 +1,9 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-jsx", "standard-react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "arrow-parens": ["warn", "always"],
+    "jsx-quotes": ["error", "prefer-double"]
+  }
+}
