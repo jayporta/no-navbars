@@ -1,9 +1,23 @@
 {
   "parser": "babel-eslint",
   "extends": ["standard", "standard-jsx", "standard-react"],
+  "plugins": [
+    "jsx-a11y"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "arrow-parens": ["warn", "always"],
     "jsx-quotes": ["error", "prefer-double"]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
