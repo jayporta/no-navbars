@@ -1,8 +1,9 @@
 /* eslint-disable camelcase */
 import dayjs from 'dayjs'
 import { insertComma } from 'app/_libraries'
-import { ErrorScreen, Loader, ContentGrid } from 'app/dumb_components'
+import { ErrorScreen, Loader, ContentGrid, Tooltip } from 'app/dumb_components'
 import { useGetTimesBestSellersQuery } from 'app/_services/timesBestSellersApiService'
+import storeIconForName from './libraries/storeIconForName'
 import './nytBestSellers.scss'
 
 const NytBestSellers = () => {
@@ -46,8 +47,7 @@ const NytBestSellers = () => {
               />
               <div className="nyt-best-sellers__item__info">
                 <figcaption>
-                  No. {rank}
-                  <br />
+                  <h4>No. {rank}</h4>
                   <span className="nyt-best-sellers__item__info--large">
                     {title}
                   </span>
@@ -58,30 +58,30 @@ const NytBestSellers = () => {
                 </figcaption>
                 <div className="nyt-best-sellers__item__info__isbns">
                   {
-                  isbns.map(({ isbn10, isbn13 }, i) => (
-                    <div key={i}>
-                      <span>ISBN-10: {isbn10}</span>
-                      {insertComma(isbns, i)}
-                      <span>ISBN-13: {isbn13}</span>
-                    </div>
-                  ))
-                }
+                    isbns.map(({ isbn10, isbn13 }, i) => (
+                      <div key={i}>
+                        <span>ISBN-10: {isbn10}</span>
+                        {insertComma(isbns, i)}
+                        <span>ISBN-13: {isbn13}</span>
+                      </div>
+                    ))
+                  }
                 </div>
                 <div className="nyt-best-sellers__item__info__buy-links">
                   {
-                  buy_links.map(({ name, url }, i) => (
-                    <a
-                      key={i}
-                      className=""
-                      href={url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {name}
-                      {insertComma(buy_links, i)}
-                    </a>
-                  ))
-                }
+                    buy_links.map(({ name, url }, i) => (
+                      <div className="nyt-best-sellers__item__info__buy-links__icon" key={i}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <img src={storeIconForName(name)} alt={`Logo for ${name}`} />
+                        </a>
+                        <Tooltip text={name} />
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
             </div>

@@ -1,5 +1,7 @@
 ### WIP as of June 25, 2021
 
+[Deployed to Heroku](https://no-navbars.herokuapp.com/) (that's why eslint packages are all in dependencies instead of devDependencies)
+
 Remember frames? That column on the left of a web page that was used for page navigation? They're dead.
 
 You know nav bars? That bar on the top of a web page that's used for page navigation? They're boring.
@@ -18,6 +20,7 @@ A different way of organizing files so there's less digging through nested direc
 
 Stuff used:
 
+- Heroku
 - React (via create-react-app June 2021)
 - Redux Toolkit
 - React Router Dom

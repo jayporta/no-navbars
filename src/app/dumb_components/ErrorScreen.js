@@ -21,7 +21,7 @@ const ErrorScreen = ({ errorObject }) => {
 }
 
 ErrorScreen.propTypes = {
-  errorObject: PropTypes.object
+  errorObject: PropTypes.object.isRequired
 }
 
 export default ErrorScreen

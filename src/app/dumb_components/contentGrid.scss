@@ -7,12 +7,12 @@ ul.content-grid {
   padding: 0;
   li {
     margin-top: 20px;
-    max-width: 260px;
+    // max-width: 285px;
   }
   @supports (display: grid) {
     // https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/#layout-3-trello-style-card-layout
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     grid-gap: 10px;
     align-items: start;
     li {

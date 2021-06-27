@@ -13,8 +13,8 @@ const Emoji = ({ label, symbol }) => (
 )
 
 Emoji.propTypes = {
-  label: PropTypes.string,
-  symbol: PropTypes.string
+  label: PropTypes.string.isRequired,
+  symbol: PropTypes.string.isRequired
 }
 
 export default Emoji
