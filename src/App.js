@@ -4,9 +4,9 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import ImdbSearch from './imdb/ImdbSearch'
+import NytBestSellers from './nyt/NytBestSellers'
 import AppThemeSwitcher from './AppThemeSwitcher'
-import './app.css'
+import './app.scss'
 
 const App = () => (
   <div id="app">
@@ -15,7 +15,7 @@ const App = () => (
       <Link to="/imdb_search">IMDB Search</Link>
       <Switch>
         <Route path="/imdb_search">
-          <ImdbSearch />
+          <NytBestSellers />
         </Route>
       </Switch>
     </Router>

@@ -1,14 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { imdbApi } from './imdb/imdbApiService'
+import { timesBestSellersApi } from '../_services/timesBestSellersApiService'
 import themeReducer from './theme/themeSlice'
 
 const store = configureStore({
   reducer: {
     theme: themeReducer,
-    [imdbApi.reducerPath]: imdbApi.reducer
+    [timesBestSellersApi.reducerPath]: timesBestSellersApi.reducer
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(imdbApi.middleware)
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(timesBestSellersApi.middleware)
 })
 
 setupListeners(store.dispatch)

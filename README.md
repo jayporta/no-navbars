@@ -24,5 +24,9 @@ Stuff used:
 - RTK Query
 - Cookies for preserving theme
 - CSS variables
+- SCSS for nesting
+- BEM CSS methodology
 - ESLint using [Standard](https://standardjs.com) with three custom rules
 - Sun and moon icons from [Icons8](https://icons8.com/icon/set/weather)
+- NY Times Best Sellers API
+- dayjs

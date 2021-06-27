@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import store from './store/store'
-import { setTheme } from './store/theme/themeSlice'
-import themeCookie from './store/theme/themeCookie'
-import './index.css'
+import store from './_store/store'
+import { setTheme } from './_store/theme/themeSlice'
+import themeCookie from './_store/theme/themeCookie'
+import './index.scss'
 
 const themeSaved = themeCookie.get()
 store.dispatch(setTheme(themeSaved))

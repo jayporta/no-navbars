@@ -18,10 +18,12 @@ export const themeSlice = createSlice({
       const isDark = payload === 'dark'
       const background = isDark ? '#000' : '#fff'
       const foreground = isDark ? '#fff' : '#292929'
+      const foregroundLight = isDark ? '#eceaea' : '#d1d1d1'
       const linkColor = isDark ? '#3581ff' : '#1a0dab'
 
       document.documentElement.style.setProperty('--background', background)
       document.documentElement.style.setProperty('--foreground', foreground)
+      document.documentElement.style.setProperty('--foreground-light', foregroundLight)
       document.documentElement.style.setProperty('--link', linkColor)
       state.value = action.payload
 

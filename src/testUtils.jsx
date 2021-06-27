@@ -2,8 +2,8 @@ import React from 'react'
 import { render as rtlRender } from '@testing-library/react'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
-import { imdbApi } from './store/imdb/imdbApiService'
-import themeReducer from './store/theme/themeSlice'
+import { imdbApi } from './_services/timesBestSellersApiService'
+import themeReducer from './_store/theme/themeSlice'
 
 function render (
   ui,

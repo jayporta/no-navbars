@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './toggle.css'
+import './toggle.scss'
 
 // Modified from a toggle tutorial
 // https://dev.to/devggaurav/let-s-create-a-custom-toggle-switch-using-html-and-css-33df

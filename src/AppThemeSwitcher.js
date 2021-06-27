@@ -1,5 +1,5 @@
-import { setTheme } from './store/theme/themeSlice'
 import { useSelector, useDispatch } from 'react-redux'
+import { setTheme } from './_store/theme/themeSlice'
 import sun from './_images/sun.png'
 import moon from './_images/moon.png'
 import { Toggle } from './dumb_components'

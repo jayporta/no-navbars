@@ -6,16 +6,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 a {
   color: var(--link);
 }
-
 * {
+  box-sizing: border-box;
   color: var(--foreground);
 }
