@@ -2,7 +2,7 @@ import React from 'react'
 import { render as rtlRender } from '@testing-library/react'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
-import { imdbApi } from 'app/_services/timesBestSellersApiService'
+import { timesBestSellersApi } from 'app/_services/timesBestSellersApiService'
 import themeReducer from 'app/_store/theme/themeSlice'
 
 function render (
@@ -12,7 +12,7 @@ function render (
     store = configureStore({
       reducer: {
         theme: themeReducer,
-        [imdbApi.reducerPath]: imdbApi.reducer
+        [timesBestSellersApi.reducerPath]: timesBestSellersApi.reducer
       },
       preloadedState
     }),
