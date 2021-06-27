@@ -12,3 +12,4 @@ Just kidding. I’lll write some and try to remember to use TDD. I just get exci
 <br />
 Oh… I deployed this app to Heroku and as a result had to move all the eslint-related dev dependencies to the dependencies object. So lame.
 <br />
+Decided to play around with some navigation ideas. First one reminds me of a circus tent. Can be seen in [this commit](https://github.com/jayporta/no-navbars/commit/8f11be5dbd57a40ac366cdae5cb1c5ab160e3eb2)
