@@ -7,8 +7,8 @@ const Toggle = ({
   onToggle,
   name,
   checked,
-  offBackground,
-  onBackground
+  offIndicator,
+  onIndicator
 }) => (
   <div className="toggle">
     <label className="toggle__body">
@@ -22,9 +22,13 @@ const Toggle = ({
         data-testid="toggle"
       />
       <div className="toggle__body__slider">
-        {offBackground}
+        <div className="toggle__body__slider__indicator">
+          {offIndicator}
+        </div>
         <div className="toggle__body__slider__knob" />
-        {onBackground}
+        <div className="toggle__body__slider__indicator">
+          {onIndicator}
+        </div>
       </div>
     </label>
   </div>
@@ -34,8 +38,8 @@ Toggle.propTypes = {
   onToggle: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
-  offBackground: PropTypes.node,
-  onBackground: PropTypes.node
+  offIndicator: PropTypes.node,
+  onIndicator: PropTypes.node
 }
 
 export default Toggle

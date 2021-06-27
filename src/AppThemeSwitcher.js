@@ -15,8 +15,8 @@ const AppThemeSwitcher = () => {
         name="theme-switch"
         checked={theme === 'dark'}
         onToggle={() => dispatch(setTheme(theme === 'light' ? 'dark' : 'light'))}
-        offBackground={<img src={sun} alt="sun" />}
-        onBackground={<img src={moon} alt="moon" />}
+        offIndicator={<img src={sun} alt="sun" />}
+        onIndicator={<img src={moon} alt="moon" />}
       />
     </div>
   )

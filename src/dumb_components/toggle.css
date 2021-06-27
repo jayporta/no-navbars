@@ -25,6 +25,13 @@
   align-items: center;
   transition: 300ms;
 }
+.toggle__body__slider__indicator {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+}
 .toggle__body__slider__knob {
   flex: 1 0 auto;
   height: 26px;
