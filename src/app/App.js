@@ -4,9 +4,9 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import NytBestSellers from './nyt/NytBestSellers'
-import AppThemeSwitcher from './AppThemeSwitcher'
-import './app.scss'
+import NytBestSellers from 'app/nyt/NytBestSellers'
+import AppThemeSwitcher from 'app/AppThemeSwitcher'
+import 'app/app.scss'
 
 const App = () => (
   <div id="app">

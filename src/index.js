@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import App from './App'
-import reportWebVitals from './reportWebVitals'
-import store from './_store/store'
-import { setTheme } from './_store/theme/themeSlice'
-import themeCookie from './_store/theme/themeCookie'
+import App from 'app/App'
+import reportWebVitals from 'app/reportWebVitals'
+import store from 'app/_store/store'
+import { setTheme } from 'app/_store/theme/themeSlice'
+import themeCookie from 'app/_store/theme/themeCookie'
 import './index.scss'
 
 const themeSaved = themeCookie.get()

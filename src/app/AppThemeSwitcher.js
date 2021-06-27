@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { setTheme } from './_store/theme/themeSlice'
-import sun from './_images/sun.png'
-import moon from './_images/moon.png'
-import { Toggle } from './dumb_components'
+import { setTheme } from 'app/_store/theme/themeSlice'
+import sun from 'app/_images/sun.png'
+import moon from 'app/_images/moon.png'
+import { Toggle } from 'app/dumb_components'
 import './appThemeSwitcher.css'
 
 const AppThemeSwitcher = () => {

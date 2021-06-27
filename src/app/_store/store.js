@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { setupListeners } from '@reduxjs/toolkit/query'
-import { timesBestSellersApi } from '../_services/timesBestSellersApiService'
+import { timesBestSellersApi } from 'app/_services/timesBestSellersApiService'
 import themeReducer from './theme/themeSlice'
 
 const store = configureStore({

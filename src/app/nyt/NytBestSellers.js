@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
 import dayjs from 'dayjs'
-import { insertComma } from '../_libraries'
-import { ErrorScreen, Loader, ContentGrid } from '../dumb_components'
-import { useGetTimesBestSellersQuery } from '../_services/timesBestSellersApiService'
+import { insertComma } from 'app/_libraries'
+import { ErrorScreen, Loader, ContentGrid } from 'app/dumb_components'
+import { useGetTimesBestSellersQuery } from 'app/_services/timesBestSellersApiService'
 import './nytBestSellers.scss'
 
 const NytBestSellers = () => {

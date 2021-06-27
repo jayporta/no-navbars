@@ -1,5 +1,5 @@
-import { render, fireEvent } from './testUtils'
-import App from './App'
+import { render, fireEvent } from 'app/testUtils'
+import App from 'app/App'
 
 test('renders theme switcher', () => {
   const { getByRole } = render(<App />)
