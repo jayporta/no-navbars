@@ -14,9 +14,9 @@ const Toggle = ({
     <label className="toggle__body">
       <input
         className="checkbox"
-        onChange={(e) => onToggle(e.target.value)}
+        onChange={onToggle}
         type="checkbox"
-        role="checkbox"
+        role="switch"
         name={name}
         checked={checked}
         data-testid="toggle"

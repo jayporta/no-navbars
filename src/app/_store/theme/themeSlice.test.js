@@ -1,4 +1,4 @@
-import reducer, { setTheme } from './themeSlice'
+import reducer, { toggleTheme } from './themeSlice'
 
 describe('themeSlice', () => {
   const originalWarn = console.warn
@@ -7,20 +7,21 @@ describe('themeSlice', () => {
   afterEach(() => (console.warn = originalWarn))
 
   test('should set theme only for "light" or "dark"', () => {
+    window.matchMedia = jest.fn(() => ({ matches: false }))
     const previousState = {
-      value: 'light'
+      theme: 'light',
+      useSystemTheme: false
     }
-    const testSetTheme = (color) => reducer(previousState, setTheme(color))
-    expect(testSetTheme('dark')).toEqual({
-      value: 'dark'
+    const testToggleDark = (color) => reducer(previousState, toggleTheme(color))
+    expect(testToggleDark()).toEqual({
+      theme: 'dark',
+      useSystemTheme: false
     })
-    expect(testSetTheme('light')).toEqual({
-      value: 'light'
-    })
-    const setGreen = testSetTheme('green')
-    expect(consoleWarnMock).toBeCalled()
-    expect(setGreen).toEqual({
-      value: 'light'
+    previousState.theme = 'dark'
+    const testToggleLight = (color) => reducer(previousState, toggleTheme(color))
+    expect(testToggleLight()).toEqual({
+      theme: 'light',
+      useSystemTheme: false
     })
   })
 })
