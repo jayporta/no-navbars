@@ -12,9 +12,9 @@ Also I need an excuse to prove to potential employers that I can build React sit
 
 Since this is my personal project I'm building this my way (hmf!):
 
-JavaScript Standard because it supports my decision to [not use semicolons](https://www.youtube.com/watch?v=Qlr-FGbhKaI). If anything breaks because of a missing semicolon, consider it a win for Team Semicolon.
+Linting with JavaScript Standard rules because it supports my decision to [not use semicolons](https://www.youtube.com/watch?v=Qlr-FGbhKaI). If anything breaks because of a missing semicolon, consider it a win for Team Semicolon.
 
-A different way of organizing files so there's less digging through nested directories.
+Experimenting with a different way of organizing files so there's less digging through nested directories.
 
 (WIP)
 
@@ -33,3 +33,4 @@ Stuff used:
 - Sun and moon icons from [Icons8](https://icons8.com/icon/set/weather)
 - NY Times Best Sellers API
 - dayjs
+- gifs from gifcities

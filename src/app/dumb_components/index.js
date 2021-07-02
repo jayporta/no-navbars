@@ -1,5 +1,7 @@
+export { default as CurrentDate } from './CurrentDate'
 export { default as Emoji } from './Emoji'
 export { default as ErrorScreen } from './ErrorScreen'
 export { default as Loader } from './Loader'
+export { default as PageWrapper } from './PageWrapper'
 export { default as Toggle } from './Toggle'
 export { default as Tooltip } from './Tooltip'

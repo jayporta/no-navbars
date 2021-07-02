@@ -1,8 +1,14 @@
 import './loader.scss'
+import bartSkating from 'app/_images/bart_skating.gif'
 
-const Loader = () => (
-  // Will get fancy in the near future
-  <div className="loader"><h1>Loading</h1></div>
+export default () => (
+  <div className="loader">
+    <div className="loader__inner">
+      <img
+        src={bartSkating}
+        alt="Animated GIF of Bart Simpson skateboarding. Page is loading."
+      />
+      <div><span>loading</span></div>
+    </div>
+  </div>
 )
-
-export default Loader

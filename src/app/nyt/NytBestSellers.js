@@ -1,37 +1,26 @@
 // Since the fields provided by the API are underscore...
 /* eslint-disable camelcase */
 import dayjs from 'dayjs'
-import { ErrorScreen, Loader } from 'app/dumb_components'
+import { PageWrapper } from 'app/dumb_components'
 import { useGetTimesBestSellersQuery } from 'app/_services/timesBestSellersApiService'
 import NytBestSellersBuyLinks from './NytBestSellersBuyLinks'
 import './nytBestSellers.scss'
 
 const NytBestSellers = () => {
   const { data, error, isLoading } = useGetTimesBestSellersQuery()
-  if (isLoading) return <Loader />
-  if (error) return <ErrorScreen errorObject={error} />
-  if (!data?.results?.books) {
-    return (
-      <ErrorScreen errorObject={Error({ name: 'Error', code: '1', message: 'API reached but is missing data.' })} />
-    )
-  }
-
-  const {
-    results: {
-      books,
-      published_date,
-      display_name
-    } = {}
-  } = data
 
   return (
-    <div className="nyt-best-sellers">
+    <PageWrapper
+      className="nyt-best-sellers"
+      error={error}
+      isLoading={isLoading}
+    >
       <h1>New York Times Best Sellers List</h1>
-      <h3>{display_name}</h3>
-      <h6>Published Date: {dayjs(published_date).format('dddd MMMM D, YYYY')}</h6>
+      <h3>{data?.results?.display_name}</h3>
+      <h6>Published Date: {dayjs(data?.results?.published_date).format('dddd MMMM D, YYYY')}</h6>
       <ul className="nyt-best-sellers__list">
         {
-          books.map(({
+          data?.results?.books.map(({
             book_image,
             rank,
             title,
@@ -71,7 +60,7 @@ const NytBestSellers = () => {
           ))
         }
       </ul>
-    </div>
+    </PageWrapper>
   )
 }
 

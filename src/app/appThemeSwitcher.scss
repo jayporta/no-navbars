@@ -7,5 +7,16 @@
     display: flex;
     align-items: center;
     margin-left: 10px;
+    label {
+      padding: 5px;
+      border-radius: 5px;
+      color: var(--foreground);
+      transition: 300ms;
+      font-size: 12px;
+      &:hover {
+        background: var(--foreground);
+        color: var(--background);
+      }
+    }
   }
 }
