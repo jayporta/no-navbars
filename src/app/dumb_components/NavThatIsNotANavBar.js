@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import './navThatIsNotANavBar.scss'
 import nytBestSellersLogo from 'app/_images/nyt_best_seller.png'
 
 export default () => (

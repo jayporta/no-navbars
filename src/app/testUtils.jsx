@@ -1,6 +1,6 @@
 import React from 'react'
 import { render as rtlRender } from '@testing-library/react'
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import { timesBestSellersApi } from 'app/_services/timesBestSellersApiService'
 import themeReducer from 'app/_store/theme/themeSlice'
@@ -14,6 +14,9 @@ function render (
         theme: themeReducer,
         [timesBestSellersApi.reducerPath]: timesBestSellersApi.reducer
       },
+      middleware: (getDefaultMiddleware) => (
+        getDefaultMiddleware().concat(timesBestSellersApi.middleware)
+      ),
       preloadedState
     }),
     ...renderOptions

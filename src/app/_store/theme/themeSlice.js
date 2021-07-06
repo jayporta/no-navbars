@@ -8,11 +8,13 @@ const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').m
 const setCssVariables = (theme) => {
   const setDark = theme === 'dark'
   const background = setDark ? '#000' : '#fff'
+  const backgroundRgb = setDark ? '0, 0, 0' : '255, 255, 255'
   const foreground = setDark ? '#fff' : '#292929'
   const foregroundLight = setDark ? '#eceaea' : '#d1d1d1'
   const linkColor = setDark ? '#3581ff' : '#1a0dab'
 
   document.documentElement.style.setProperty('--background', background)
+  document.documentElement.style.setProperty('--backgroundRGB', backgroundRgb)
   document.documentElement.style.setProperty('--foreground', foreground)
   document.documentElement.style.setProperty('--foreground-light', foregroundLight)
   document.documentElement.style.setProperty('--link', linkColor)

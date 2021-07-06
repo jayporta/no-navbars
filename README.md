@@ -16,6 +16,8 @@ Linting with JavaScript Standard rules because it supports my decision to [not u
 
 Experimenting with a different way of organizing files so there's less digging through nested directories.
 
+Theme is controlled via reducer found in app/_store/theme and CSS is defined from index.scss.
+
 (WIP)
 
 Stuff used:

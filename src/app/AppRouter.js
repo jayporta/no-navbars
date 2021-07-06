@@ -1,20 +1,17 @@
 import {
-  BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom'
-import AppNavThatIsNotANavBar from './AppNavThatIsNotANavBar'
+import NavThatIsNotANavBar from './dumb_components/NavThatIsNotANavBar'
 import NytBestSellers from 'app/nyt/NytBestSellers'
 
 export default () => (
-  <Router>
-    <Switch>
-      <Route path="/nyt_best_sellers">
-        <NytBestSellers />
-      </Route>
-      <Route path="/">
-        <AppNavThatIsNotANavBar />
-      </Route>
-    </Switch>
-  </Router>
+  <Switch>
+    <Route path="/nyt_best_sellers">
+      <NytBestSellers />
+    </Route>
+    <Route path="/">
+      <NavThatIsNotANavBar />
+    </Route>
+  </Switch>
 )

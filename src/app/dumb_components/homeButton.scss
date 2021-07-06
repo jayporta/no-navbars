@@ -1,0 +1,16 @@
+.home-button {
+  background: none;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  svg {
+    width: 30px;
+    height: 30px;
+    path {
+      color: var(--foreground);
+      stroke: var(--foreground);
+    }
+  }
+}
