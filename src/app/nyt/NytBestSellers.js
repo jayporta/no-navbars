@@ -7,7 +7,17 @@ import NytBestSellersBuyLinks from './NytBestSellersBuyLinks'
 import './nytBestSellers.scss'
 
 const NytBestSellers = () => {
-  const { data, error, isLoading } = useGetTimesBestSellersQuery()
+  const {
+    data: {
+      results: {
+        display_name,
+        published_date,
+        books
+      } = {}
+    } = {},
+    error,
+    isLoading
+  } = useGetTimesBestSellersQuery()
 
   return (
     <PageWrapper
@@ -16,11 +26,11 @@ const NytBestSellers = () => {
       isLoading={isLoading}
     >
       <h1>New York Times Best Sellers List</h1>
-      <h3>{data?.results?.display_name}</h3>
-      <h6>Published Date: {dayjs(data?.results?.published_date).format('dddd MMMM D, YYYY')}</h6>
+      <h3>{display_name}</h3>
+      <h6>Published Date: {dayjs(published_date).format('dddd MMMM D, YYYY')}</h6>
       <ul className="nyt-best-sellers__list">
         {
-          data?.results?.books.map(({
+          books?.map(({
             book_image,
             rank,
             title,
